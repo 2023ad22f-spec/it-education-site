@@ -1,228 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IT Education - Git Training</title>
     <style>
-        /* GLOBAL STYLES - Day 0
+      /* GLOBAL STYLES - Day 0
            Created by: Sanya (Project Leader)
            Git Command: git commit -m "Initial project structure with homepage layout" */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
-            padding: 20px;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f5f5f5;
+        padding: 20px;
+      }
 
-        h1 {
-            color: #0066cc;
-            text-align: center;
-            margin: 2rem 0;
-            padding: 1rem;
-            border-bottom: 2px solid #0066cc;
-        }
+      h1 {
+        color: #0066cc;
+        text-align: center;
+        margin: 2rem 0;
+        padding: 1rem;
+        border-bottom: 2px solid #0066cc;
+      }
 
-        /* HERO SECTION - Day 1 (Tom)
+      /* HERO SECTION - Day 1 (Tom)
            Git Command: git commit -m "Update hero section description" */
-        .hero-section {
-            background: linear-gradient(135deg, #0066cc, #0099cc);
-            color: white;
-            padding: 4rem 2rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-            text-align: center;
-        }
+      .hero-section {
+        background: linear-gradient(135deg, #0066cc, #0099cc);
+        color: white;
+        padding: 4rem 2rem;
+        border-radius: 10px;
+        margin: 2rem 0;
+        text-align: center;
+      }
 
-        .hero-title {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
+      .hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
 
-        .hero-subtitle {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            opacity: 0.9;
-        }
+      .hero-subtitle {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto 2rem;
+        opacity: 0.9;
+      }
 
-        .day-marker {
-            background: #0066cc;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
+      .day-marker {
+        background: #0066cc;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        display: inline-block;
+        margin-bottom: 1rem;
+      }
 
-        /* NAVIGATION - Day 1 (Alex)
+      /* NAVIGATION - Day 1 (Alex)
            Git Command: git commit -m "Refine navbar labels" */
-        .navbar {
-            background: white;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            margin: 2rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+      .navbar {
+        background: white;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        margin: 2rem 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #0066cc;
-        }
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #0066cc;
+      }
 
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
+      .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
 
-        .nav-link {
-            color: #333;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
+      .nav-link {
+        color: #333;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+      }
 
-        .nav-link:hover {
-            background: #0066cc;
-            color: white;
-        }
+      .nav-link:hover {
+        background: #0066cc;
+        color: white;
+      }
 
-        /* FOOTER - Day 1 (Sanya)
+      /* FOOTER - Day 1 (Sanya)
            Git Command: git commit -m "Update footer text" */
-        .footer {
-            background: #333;
-            color: white;
-            padding: 2rem;
-            margin-top: 4rem;
-            border-radius: 8px;
-        }
+      .footer {
+        background: #333;
+        color: white;
+        padding: 2rem;
+        margin-top: 4rem;
+        border-radius: 8px;
+      }
 
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
 
-        .footer-section h3 {
-            color: #0099cc;
-            margin-bottom: 1rem;
-        }
+      .footer-section h3 {
+        color: #0099cc;
+        margin-bottom: 1rem;
+      }
 
-        .footer-links {
-            list-style: none;
-        }
+      .footer-links {
+        list-style: none;
+      }
 
-        .footer-links li {
-            margin-bottom: 0.5rem;
-        }
+      .footer-links li {
+        margin-bottom: 0.5rem;
+      }
 
-        .footer-links a {
-            color: #ccc;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
+      .footer-links a {
+        color: #ccc;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
 
-        .footer-links a:hover {
-            color: white;
-        }
+      .footer-links a:hover {
+        color: white;
+      }
 
-        .copyright {
-            text-align: center;
-            margin-top: 2rem;
-            padding-top: 1rem;
-            border-top: 1px solid #555;
-            color: #999;
-            font-size: 0.9rem;
-        }
+      .copyright {
+        text-align: center;
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid #555;
+        color: #999;
+        font-size: 0.9rem;
+      }
+
+      /* HERO SLIDER - Day 2 (Sanya - Feature Branch)
+           Git Command: git commit -m "Refine hero slider content and layout structure" */
+      .hero-slider {
+        background: linear-gradient(135deg, #0066cc, #0099cc);
+        color: white;
+        padding: 3rem 2rem;
+        margin: 2rem 0;
+        border-radius: 10px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .slider-content {
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+      }
+
+      .slider-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .slider-subtitle {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+      }
+
+      .slider-indicators {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 2rem;
+      }
+
+      .slider-indicator {
+        width: 12px;
+        height: 12px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .slider-indicator.active {
+        background: white;
+      }
+
+      /* LAYOUT STRUCTURE IMPROVEMENTS - Day 2 (Sanya) */
+      .layout-demo {
+        background: white;
+        padding: 2rem;
+        margin: 2rem 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .layout-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+
+      .layout-item {
+        background: #f8f9fa;
+        padding: 1.5rem;
+        border-radius: 8px;
+        text-align: center;
+        border: 1px solid #dee2e6;
+      }
+
+      .layout-icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #0066cc;
+      }
+
+      .git-commands {
+        background: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+        padding: 1rem;
+        margin: 1rem 0;
+        font-family: monospace;
+      }
+
+      .pr-management {
+        background: #e7f3ff;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 2rem 0;
+      }
     </style>
-</head>
+  </head>
 
-
-<body>
-
-     <!-- HEADER SECTION - Day 0
+  <body>
+    <!-- HEADER SECTION - Day 0
          Created by: Sanya (Project Leader)
          Git Command: git add . && git commit -m "Initial project structure" -->
     <div class="day-marker">Day 0: Initial Setup</div>
-    
+
     <!-- NAVIGATION - Day 1 (Alex)
          Git Command: git commit -m "Refine navbar labels" -->
     <nav class="navbar">
-        <div class="logo">IT Education</div>
-        <ul class="nav-menu">
-            <li><a href="#" class="nav-link">Home</a></li>
-            <li><a href="#" class="nav-link">Courses</a></li>
-            <li><a href="#" class="nav-link">Learning Path</a></li>
-            <li><a href="#" class="nav-link">Team</a></li>
-            <li><a href="#" class="nav-link">Contact</a></li>
-        </ul>
+      <div class="logo">IT Education</div>
+      <ul class="nav-menu">
+        <li><a href="#" class="nav-link">Home</a></li>
+        <li><a href="#" class="nav-link">Courses</a></li>
+        <li><a href="#" class="nav-link">Learning Path</a></li>
+        <li><a href="#" class="nav-link">Team</a></li>
+        <li><a href="#" class="nav-link">Contact</a></li>
+      </ul>
     </nav>
     <h1>IT Education Website - Git Bootcamp</h1>
 
-   
-    <!-- HERO SECTION - Day 1 (Tom)
-         Git Command: git commit -m "Update hero section description" -->
-    <section class="hero-section">
-        <h2 class="hero-title">Master Git in 7 Days!</h2>
-        <p class="hero-subtitle">
-            Join our intensive bootcamp to learn Git from basic commands to advanced workflows. 
-            Perfect for developers who want to collaborate effectively using version control.
+    
+
+    <!-- HERO SLIDER - Day 2 (Sanya - Feature Branch)
+         Git Command: git commit -m "Refine hero slider content and layout structure" -->
+    <section class="hero-slider">
+      <div class="slider-content">
+        <h2 class="slider-title">Transform Your Git Skills in 7 Days</h2>
+        <p class="slider-subtitle">
+          Our intensive bootcamp takes you from basic commits to advanced
+          workflows. Learn through hands-on projects, team collaboration, and
+          real-world scenarios.
         </p>
-        <button style="background: white; color: #0066cc; border: none; padding: 1rem 2rem; 
-                      border-radius: 5px; font-weight: bold; cursor: pointer;">
-            Start Learning Now
-        </button>
+        <div
+          style="
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+          "
+        >
+          <button
+            style="
+              background: white;
+              color: #0066cc;
+              border: none;
+              padding: 1rem 2rem;
+              border-radius: 5px;
+              font-weight: bold;
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+            "
+          >
+            <span>🚀</span> Start Day 1
+          </button>
+          <button
+            style="
+              background: transparent;
+              color: white;
+              border: 2px solid white;
+              padding: 1rem 2rem;
+              border-radius: 5px;
+              font-weight: bold;
+              cursor: pointer;
+            "
+          >
+            View Curriculum
+          </button>
+        </div>
+
+        <div class="slider-indicators">
+          <div class="slider-indicator active"></div>
+          <div class="slider-indicator"></div>
+          <div class="slider-indicator"></div>
+          <div class="slider-indicator"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LAYOUT STRUCTURE IMPROVEMENTS - Day 2 (Sanya) -->
+    <section class="layout-demo">
+      <h2 style="text-align: center; color: #0066cc; margin-bottom: 1rem">
+        Website Structure Improvements
+      </h2>
+      <p style="text-align: center; color: #666; margin-bottom: 2rem">
+        As Project Leader, I'm improving the overall layout structure for better
+        maintainability
+      </p>
+
+      <div class="layout-grid">
+        <div class="layout-item">
+          <div class="layout-icon">🏗️</div>
+          <h3>Modular Structure</h3>
+          <p>Each section is independent and reusable</p>
+        </div>
+
+        <div class="layout-item">
+          <div class="layout-icon">📱</div>
+          <h3>Responsive Design</h3>
+          <p>Works on mobile, tablet, and desktop</p>
+        </div>
+
+        <div class="layout-item">
+          <div class="layout-icon">🎨</div>
+          <h3>Consistent Styling</h3>
+          <p>Uniform spacing, colors, and typography</p>
+        </div>
+
+        <div class="layout-item">
+          <div class="layout-icon">⚡</div>
+          <h3>Performance</h3>
+          <p>Optimized for fast loading and smooth interactions</p>
+        </div>
+      </div>
     </section>
 
     <!-- FOOTER - Day 1 (Sanya)
          Git Command: git commit -m "Update footer text" -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>IT Education</h3>
-                <p>Learn Git through hands-on, project-based training.</p>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Courses</a></li>
-                    <li><a href="#">Git Resources</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Contact Info</h3>
-                <p>Email: info@iteducation.com</p>
-                <p>Phone: (555) 123-4567</p>
-            </div>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>IT Education</h3>
+          <p>Learn Git through hands-on, project-based training.</p>
         </div>
-        
-        <div class="copyright">
-            <p>&copy; 2024 IT Education Git Bootcamp. All rights reserved.</p>
-            <p>This project demonstrates Git workflow from Day 0 to Day 7.</p>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Git Resources</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
         </div>
+
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p>Email: info@iteducation.com</p>
+          <p>Phone: (555) 123-4567</p>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>&copy; 2024 IT Education Git Bootcamp. All rights reserved.</p>
+        <p>This project demonstrates Git workflow from Day 0 to Day 7.</p>
+      </div>
     </footer>
-
-</body>
-
+  </body>
 </html>
